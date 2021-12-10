@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 import { UneStatistiqueComponent } from './une-statistique/une-statistique.component';
 import { ListeStatistiquesComponent } from './liste-statistiques/liste-statistiques.component';
 import { CreationStatistiqueComponent } from './creation-statistique/creation-statistique.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -17,6 +18,7 @@ import { CreationStatistiqueComponent } from './creation-statistique/creation-st
   imports: [
     BrowserModule,
     AppRoutingModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
