@@ -1,5 +1,4 @@
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
-import { Router } from '@angular/router';
 import { Statistique } from '../models/statistique';
 
 @Component({
@@ -16,12 +15,10 @@ export class UneStatistiqueComponent implements OnInit {
   delete() {
     this.Asupprimer.emit()
   }
+  
+  constructor() { }
 
-  constructor(private routeur: Router) { }
-
-  modify() {
-    this.routeur.navigate(["/creationfilms", this.uneStatistique.identifiant]);
-  }
+  
 
   ngOnInit(): void {
   }

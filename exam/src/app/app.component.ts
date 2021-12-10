@@ -18,5 +18,11 @@ export class AppComponent {
     this.tabStatistiques = this.singletonStatistiques.tabStatistiques;
   }
 
+  supprimer(statistique: Statistique) {
+    let index = this.tabStatistiques.indexOf(statistique);
+    if (index != -1) {
+      this.tabStatistiques.splice(index, 1);
+    }
+  }
   
 }
