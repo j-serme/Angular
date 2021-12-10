@@ -1,5 +1,6 @@
 import { Component, Input } from '@angular/core';
 import { Statistique } from './models/statistique';
+import { StatistiqueService } from './statistique.service';
 
 @Component({
   selector: 'app-root',
@@ -9,20 +10,12 @@ import { Statistique } from './models/statistique';
 export class AppComponent {
   title = 'exam';
 
-  tabStatistiques: Statistique[] = [];
   @Input() public uneStatistique!:Statistique;
 
-  stat1 = new Statistique("fa1free0-be3b-11mb-58ec-7f4963ecfb46", "Démographie en Espagne", "45M");
-  stat2 = new Statistique("fa1free0-be3b-11mb-58ec-7f4963ecfb46", "Nombre de morts en Finlande en 2020", "100K");
+  public tabStatistiques: Statistique[] = [];
 
-  
-
-  constructor() {
-    this.tabStatistiques.push(this.stat1, this.stat2);
-    
-    setTimeout(() => {
-      this.tabStatistiques.push(new Statistique("vnezjbvjzbvezbvezbvbze", "creme anglaise", "20CL"));
-    }, 5000);
+  constructor(public singletonStatistiques : StatistiqueService) { 
+    this.tabStatistiques = this.singletonStatistiques.tabStatistiques;
   }
 
   
