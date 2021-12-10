@@ -1,7 +1,2 @@
-<nav>
-  <ul>
-    <li><a routerLink="liste-statistiques" routerLinkActive="active">Liste des statistiques</a></li>
-    <li><a routerLink="creation-statistique" routerLinkActive="active">Gestion des statistiques</a></li>
-  </ul>
-</nav>
+<app-une-statistique *ngFor="let s of tabStatistiques" [uneStatistique]="s"></app-une-statistique>
 <router-outlet></router-outlet>
