@@ -15,8 +15,14 @@ export class AppComponent {
   stat1 = new Statistique("fa1free0-be3b-11mb-58ec-7f4963ecfb46", "Démographie en Espagne", "45M");
   stat2 = new Statistique("fa1free0-be3b-11mb-58ec-7f4963ecfb46", "Nombre de morts en Finlande en 2020", "100K");
 
+  
+
   constructor() {
-    this.tabStatistiques.push(this.stat1, this.stat2)
+    this.tabStatistiques.push(this.stat1, this.stat2);
+    
+    setTimeout(() => {
+      this.tabStatistiques.push(new Statistique("vnezjbvjzbvezbvezbvbze", "creme anglaise", "20CL"));
+    }, 5000);
   }
 
   
